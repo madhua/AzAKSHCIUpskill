@@ -4,7 +4,7 @@ node {
           println msg
       }
       stage ('Final') {
-          def files = powershell(returnStdout: true, script: 'ls')
+          def files = powershell(returnStdout: true, script: 'dir')
           println files
       }
 }
