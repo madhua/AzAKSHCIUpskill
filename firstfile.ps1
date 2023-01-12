@@ -7,7 +7,7 @@ Write-Host "Running Powershell core version $((Get-Host).Version) on $([Environm
 Write-Host "Reading data from json file" $jsonFile
 Write-Host "=====================JSON File data===================="
 $JSON = (Get-Content "$jsonFile" | Out-String | ConvertFrom-Json)
-Write-Host "Cluster Name" $(JSON.clustername)"
+Write-Host "Cluster Name $(JSON.clustername)"
 #foreach($node in $($JSON.cluster_nodes)) 
 #{
 #    Write-Host "Hostname: $($node.name), IP: $($node.ip)"
