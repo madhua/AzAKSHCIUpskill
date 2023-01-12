@@ -18,12 +18,10 @@ node {
           steps {
               parallel(
                  a: {
-                    def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
-                    println step1msg
+                    powershell(returnStdout: true, script: './firstfile.ps1')
                  },
                  b: {
-                    def step2msg = powershell(returnStdout: true, script: './secondfile.ps1')
-                    println step2msg     
+                    powershell(returnStdout: true, script: './secondfile.ps1')     
                  }
               )
           }
