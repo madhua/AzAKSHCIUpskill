@@ -1,3 +1,4 @@
+
 node {
       stage('Welcome') {
           def msg = powershell(returnStdout: true, script: 'Write-Output "Welcome to PowerShell at Jenkins world!"')
@@ -18,6 +19,7 @@ node {
                               def step2msg = powershell(returnStdout: true, script: './secondfile.ps1')
                               println step2msg
                         }
+                     }
                   }
             }
       }
