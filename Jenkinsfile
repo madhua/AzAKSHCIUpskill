@@ -16,4 +16,16 @@ node {
                   println step2msg
             }
       }
+    stage("Parallel") {
+    steps {
+        parallel (
+            "firstTask" : {
+                echo "step111"
+            },
+            "secondTask" : {
+                echo "step222"
+            }
+        )
+    }
+  }
 }
