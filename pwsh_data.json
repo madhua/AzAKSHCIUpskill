@@ -1,0 +1,17 @@
+{
+  "cluster_name": "test-cluster-x",
+  "cluster_nodes": [
+    {
+      "name": "ashci_a.services.poc",
+      "ip": "172.168.212.102"
+    },
+    {
+      "name": "ashci_b.services.poc",
+      "ip": "172.168.212.103"
+    },
+    {
+      "name": "ashci_c.services.poc",
+      "ip": "172.168.212.104"
+    }
+  ]
+}
