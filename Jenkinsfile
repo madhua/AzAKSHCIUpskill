@@ -18,10 +18,10 @@ node {
           steps {
               parallel(
                  a: {
-                    powershell(returnStdout: true, script: './firstfile.ps1')
+                    powershell -Command './firstfile.ps1'
                  },
                  b: {
-                    powershell(returnStdout: true, script: './secondfile.ps1')     
+                    powershell -Command './secondfile.ps1'     
                  }
               )
           }
