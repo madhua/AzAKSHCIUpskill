@@ -18,10 +18,10 @@ node {
           steps {
               parallel(
                  a: {
-                    powershell -Command './firstfile.ps1'
+                    powershell -Command "./firstfile.ps1"
                  },
                  b: {
-                    powershell -Command './secondfile.ps1'     
+                    powershell -Command "./secondfile.ps1"    
                  }
               )
           }
