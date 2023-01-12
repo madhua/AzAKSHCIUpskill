@@ -7,8 +7,8 @@ Write-Host "Running Powershell core version $((Get-Host).Version) on $([Environm
 Write-Host "Reading data from json file" $jsonFile
 Write-Host "=====================JSON File data===================="
 $JSON = Get-Content "$jsonFile" | ConvertFrom-Json
-$JSON | Select-Object -Property hostname,ip | ForEach-Object {
-    Write-Host "Hostname:" $_.hostname, "IP:" $_.ip
+$JSON | Select-Object -Property name,ip | ForEach-Object {
+    Write-Host "Hostname:" $_.name, "IP:" $_.ip
 }
 Write-Host "======================================================="
 Write-Host "step-1 Completed"
