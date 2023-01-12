@@ -1,15 +1,15 @@
 pipeline {
     agent any
     stages {
-      stage('Test') {
+        stage(“Compile & Build Binary”) {
             parallel {
-                 stage('step1') {
-                       echo "step1"
-                 }
-                 stage('step2') {
-                       echo "step2"
-                 }
+                stage(“Build X”) {
+                     echo "step1"
+                }
+                stage(“Build Y”) {
+                      echo "step2"
+                }
             }
-      }
+        }
     }
 }
