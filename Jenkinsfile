@@ -7,7 +7,7 @@ node {
           git url: 'https://github.com/madhua/AzAKSHCIUpskill.git', credentialsId: 'github-madhua', branch: 'main'
       }
       stage('Test-Step1') {
-            def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
+            def step1msg = powershell(returnStdout: true, script: "./firstfile.ps1 './pwsh_data.json'")
             println step1msg
        }
        stage('Test-Step2') {
