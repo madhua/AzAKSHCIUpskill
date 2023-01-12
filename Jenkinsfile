@@ -7,8 +7,7 @@ node {
       stage('Checkout') {
           git url: 'https://github.com/madhua/AzAKSHCIUpskill.git', credentialsId: 'github-madhua', branch: 'main'
       }
-      stages {
-            stage ('Test') {
+      stage ('Test') {
                   stage ('Step1') {
                         steps {
                               def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
@@ -21,6 +20,5 @@ node {
                         }
                      }
                   }
-            }
       }
 }
