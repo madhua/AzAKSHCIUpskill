@@ -23,6 +23,5 @@ node {
                        echo "step2"
                  }
             }
-          }
       }
 }
