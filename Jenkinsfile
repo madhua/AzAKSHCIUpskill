@@ -11,16 +11,15 @@ node {
           println files
       }
       stage ('Working Directory') {
-          def files = powershell(returnStdout: true, script: 'pwd')
-          println files
+          def pwdir = powershell(returnStdout: true, script: 'pwd')
+          println pwdir
       }
       stage ('Step1') {
-          def files = powershell(returnStdout: true, script: './firstfile.ps1')
-          println files
+          def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
+          println step1msg
       }
       stage ('Step2') {
-          def files = powershell(returnStdout: true, script: './secondfile.ps1')
-          println files
+          def step2msg = powershell(returnStdout: true, script: './secondfile.ps1')
+          println step2msg
       }      
 }
-
