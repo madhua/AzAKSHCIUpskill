@@ -15,11 +15,11 @@ node {
           println files
       }
       stage ('Step1') {
-          def files = powershell(returnStdout: true, script: 'firstfile.ps1')
+          def files = powershell(returnStdout: true, script: './firstfile.ps1')
           println files
       }
       stage ('Step2') {
-          def files = powershell(returnStdout: true, script: 'secondfile.ps1')
+          def files = powershell(returnStdout: true, script: './secondfile.ps1')
           println files
       }      
 }
