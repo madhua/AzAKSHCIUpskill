@@ -15,15 +15,14 @@ node {
           println pwdir
       }
       stage ('Test') {
-          steps {
-              parallel(
-                 a: {
+            parallel {
+                 stage ('step1') {
                        echo "step1"
                  },
-                 b: {
+                 stage ('step2') {
                        echo "step2"
                  }
-              )
+            }
           }
       }
 }
