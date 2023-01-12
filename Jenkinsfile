@@ -18,11 +18,9 @@ node {
           steps {
               parallel(
                  a: {
-                       #pwsh -Command "./firstfile.ps1"
                        echo "step1"
                  },
                  b: {
-                       #pwsh -Command "./secondfile.ps1"
                        echo "step2"
                  }
               )
