@@ -17,11 +17,11 @@ node {
       stage ('Test') {
           steps {
               parallel(
-                 step1: {
+                 a: {
                     def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
                     println step1msg
                  },
-                 step2: {
+                 b: {
                     def step2msg = powershell(returnStdout: true, script: './secondfile.ps1')
                     println step2msg     
                  }
