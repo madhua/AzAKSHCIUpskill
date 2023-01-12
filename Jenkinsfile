@@ -14,12 +14,17 @@ node {
           def pwdir = powershell(returnStdout: true, script: 'pwd')
           println pwdir
       }
-      stage ('Step1') {
-          def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
-          println step1msg
-      }
-      stage ('Step2') {
-          def step2msg = powershell(returnStdout: true, script: './secondfile.ps1')
-          println step2msg
-      }      
+      stage ('Test') {
+          steps {
+              parallel(
+                 step1: {
+                    def step1msg = powershell(returnStdout: true, script: './firstfile.ps1')
+                    println step1msg
+                 },
+                 step2: {
+                    def step2msg = powershell(returnStdout: true, script: './secondfile.ps1')
+                    println step2msg     
+                 }
+              )
+          }
 }
